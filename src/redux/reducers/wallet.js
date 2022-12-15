@@ -1,32 +1,24 @@
-import { REQUEST_STARTED, REQUEST_SUCCESSFUL, REQUEST_FAILED } from '../actions';
+import { REQUEST_SUCCESSFUL, ADD_EXPENSES } from '../actions';
 
 const initialState = {
   currencies: [],
-  errorMessage: '',
+  expenses: [],
 };
 
 const wallet = (state = initialState, action) => {
   switch (action.type) {
-  case REQUEST_STARTED:
-    return {
-      ...state,
-      errorMessage: '',
-      currencies: '',
-    };
-
   case REQUEST_SUCCESSFUL:
     return {
       ...state,
       currencies: action.payload,
-      errorMessage: '',
     };
 
-  case REQUEST_FAILED:
+  case ADD_EXPENSES:
     return {
       ...state,
-      errorMessage: action.payload,
-      currencies: '',
+      expenses: [...state.expenses, action.payload],
     };
+
   default:
     return state;
   }
