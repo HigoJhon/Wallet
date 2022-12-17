@@ -2,6 +2,7 @@
 export const LOGIN = 'LOGIN';
 export const REQUEST_SUCCESSFUL = 'REQUEST_SUCCESSFUL';
 export const ADD_EXPENSES = 'ADD_EXPENSES';
+// export const REMOVE = 'REMOVE';
 
 export const login = (email) => ({
   type: LOGIN,

@@ -10,7 +10,7 @@ class Header extends Component {
 
   sun = () => {
     const { expenses } = this.props;
-    console.log(expenses);
+    // console.log(expenses);
     return expenses.reduce((acc, curr) => acc + curr.value
     * curr.exchangeRates[curr.currency].ask, 0);
   };
