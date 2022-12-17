@@ -3,15 +3,11 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class Table extends Component {
-  // onButtonDelet = ({ target }) => {
-  //   const { name } = target;
-  // };
-
   render() {
     const { expenses } = this.props;
     return (
-      <table>
-        <thead>
+      <>
+        <table>
           <tr>
             <th>Descrição</th>
             <th>Tag</th>
@@ -23,31 +19,27 @@ class Table extends Component {
             <th>Moeda de conversão</th>
             <th>Editar/Excluir</th>
           </tr>
-        </thead>
-        <tbody>
+        </table>
+        <table>
           {
             expenses.map((a) => (
-              <tr key={ user.id }>
-                <td>{a.description}</td>
-                <td>{a.tag}</td>
-                <td>{a.method}</td>
-                <td>{Number(a.value).toFixed(2)}</td>
-                <td>{a.exchangeRates[a.currency].name}</td>
-                <td>{Number(a.exchangeRates[a.currency].ask).toFixed(2)}</td>
-                <td>{Number(a.value * a.exchangeRates[a.currency].ask).toFixed(2)}</td>
-                <td>Real</td>
-                {/* <button
-                    data-testid="delete-btn"
-                    type="button"
-                    onChange={ this.onButtonDelet }
-                  >
-                    Excluir
-                  </button> */}
-              </tr>
+              <tbody key={ a }>
+                <tr>
+                  <td>{a.description}</td>
+                  <td>{a.tag}</td>
+                  <td>{a.method}</td>
+                  <td>{Number(a.value).toFixed(2)}</td>
+                  <td>{a.exchangeRates[a.currency].name}</td>
+                  <td>{Number(a.exchangeRates[a.currency].ask).toFixed(2)}</td>
+                  <td>{Number(a.value * a.exchangeRates[a.currency].ask).toFixed(2)}</td>
+                  <td>Real</td>
+                </tr>
+              </tbody>
+
             ))
           }
-        </tbody>
-      </table>
+        </table>
+      </>
     );
   }
 }
