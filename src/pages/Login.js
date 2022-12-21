@@ -23,7 +23,7 @@ class Login extends React.Component {
       const valiEmail = email.match(validation);
       const valiPass = password.length < six;
       const valid = !valiEmail || valiPass;
-      console.log(valid);
+      // console.log(valid);
       this.setState({ isDisabled: valid });
     });
   };

@@ -5,6 +5,7 @@ import { addExpenses, fetchMoeda } from '../redux/actions';
 
 class WalletForm extends Component {
   state = {
+    id: 0,
     value: '',
     description: '',
     currency: 'USD',
@@ -17,8 +18,8 @@ class WalletForm extends Component {
     dispatch(fetchMoeda());
   }
 
-  handleChange = ({ target }) => {
-    const { name, value } = target;
+  handleChange = ({ target: { name, value } }) => {
+    // const { name, value } = target;
     this.setState({
       [name]: value,
     });
@@ -26,14 +27,19 @@ class WalletForm extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    const { value, description, currency, method, tag } = this.state;
+    const { id, value, description, currency, method, tag } = this.state;
 
     const api = await fetch('https://economia.awesomeapi.com.br/json/all');
     const response = await api.json();
-    const { dispatch, expenses } = this.props;
+    const { dispatch } = this.props;
+
+    this.setState((eve) => ({
+      ...eve,
+      id: eve.id + 1,
+    }));
 
     const newStart = {
-      id: expenses.length,
+      id,
       value,
       description,
       currency,
@@ -55,7 +61,7 @@ class WalletForm extends Component {
   render() {
     const { value, description, currency, method, tag } = this.state;
     const { currencies } = this.props;
-    console.log(currencies);
+    // console.log(currencies);
     const pagamento = ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'];
     const categoria = ['Lazer', 'Alimentação', 'Trabalho', 'Transporte', 'Saúde'];
     return (
