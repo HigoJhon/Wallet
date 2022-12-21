@@ -1,8 +1,10 @@
-import { REQUEST_SUCCESSFUL, ADD_EXPENSES, REMOVE } from '../actions';
+import { REQUEST_SUCCESSFUL, ADD_EXPENSES, REMOVE, EDIT, SAVEEDIT } from '../actions';
 
 const initialState = {
   currencies: [],
   expenses: [],
+  editor: false,
+  idToEdit: 0,
 };
 
 const wallet = (state = initialState, action) => {
@@ -23,6 +25,20 @@ const wallet = (state = initialState, action) => {
     return {
       ...state,
       expenses: state.expenses.filter((a) => Number(a.id !== action.payload)),
+    };
+
+  case EDIT:
+    return {
+      ...state,
+      idToEdit: action.payload,
+      editor: true,
+    };
+
+  case SAVEEDIT:
+    return {
+      ...state,
+      expenses: action.payload,
+      editor: false,
     };
 
   default:

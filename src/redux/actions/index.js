@@ -3,6 +3,8 @@ export const LOGIN = 'LOGIN';
 export const REQUEST_SUCCESSFUL = 'REQUEST_SUCCESSFUL';
 export const ADD_EXPENSES = 'ADD_EXPENSES';
 export const REMOVE = 'REMOVE';
+export const EDIT = 'EDIT';
+export const SAVEEDIT = 'SAVEEDIT';
 
 export const login = (email) => ({
   type: LOGIN,
@@ -26,6 +28,20 @@ export function addExpenses(expenses) {
 export function removeId(id) {
   return {
     type: REMOVE,
+    payload: id,
+  };
+}
+
+export function editId(id) {
+  return {
+    type: EDIT,
+    payload: id,
+  };
+}
+
+export function addEdit(id) {
+  return {
+    type: SAVEEDIT,
     payload: id,
   };
 }
