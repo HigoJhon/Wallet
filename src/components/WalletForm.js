@@ -111,7 +111,7 @@ class WalletForm extends Component {
               data-testid="currency-input"
               onChange={ this.handleChange }
             >
-              {currencies.map((a) => <option key={ a }>{ a }</option>)}
+              {currencies.map((a, index) => <option key={ index }>{ a }</option>)}
             </select>
           </label>
           <label htmlFor="categoria">
@@ -122,7 +122,7 @@ class WalletForm extends Component {
               data-testid="tag-input"
               onChange={ this.handleChange }
             >
-              {categoria.map((a) => <option key={ a }>{ a }</option>)}
+              {categoria.map((a, index) => <option key={ index }>{ a }</option>)}
             </select>
           </label>
           <label htmlFor="pagamento">
@@ -133,7 +133,7 @@ class WalletForm extends Component {
               onChange={ this.handleChange }
               data-testid="method-input"
             >
-              {pagamento.map((a) => <option key={ a.id }>{ a }</option>)}
+              {pagamento.map((a, index) => <option key={ index }>{ a }</option>)}
             </select>
           </label>
           <label htmlFor="descricao">
@@ -150,7 +150,6 @@ class WalletForm extends Component {
             editor !== false
               ? (
                 <button
-                  data-testid="edit-btn"
                   type="button"
                   onClick={ this.handleSubmitEdit }
                 >

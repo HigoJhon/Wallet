@@ -33,7 +33,7 @@ class Table extends Component {
               <th>Editar/Excluir</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody data-testid="resul-table">
             {
               expenses.map((a) => (
                 <tr key={ a.id }>
@@ -58,7 +58,7 @@ class Table extends Component {
                       data-testid="edit-btn"
                       onClick={ () => this.editClick(a.id) }
                     >
-                      Editar despesa
+                      Editar
                     </button>
                   </td>
                 </tr>
