@@ -9,8 +9,10 @@ class Wallet extends React.Component {
     const { email } = this.props;
     return (
       <>
+        <h1>WALLET</h1>
         <div data-testid="email-field">{`Email: ${email}`}</div>
         <Header />
+        <br />
         <Table />
       </>
     );

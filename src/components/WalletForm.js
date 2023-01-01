@@ -150,6 +150,7 @@ class WalletForm extends Component {
             editor !== false
               ? (
                 <button
+                  id="buttonEdit"
                   type="button"
                   onClick={ this.handleSubmitEdit }
                 >

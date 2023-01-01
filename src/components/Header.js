@@ -35,6 +35,7 @@ class Header extends Component {
           </label>
 
         </form>
+        <br />
         <WalletForm />
       </>
     );
