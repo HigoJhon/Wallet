@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/HigoJhon/Wallet/static/css/main.d31aedf8.css",
+    "main.js": "/HigoJhon/Wallet/static/js/main.8140fd6f.js",
+    "index.html": "/HigoJhon/Wallet/index.html",
+    "main.d31aedf8.css.map": "/HigoJhon/Wallet/static/css/main.d31aedf8.css.map",
+    "main.8140fd6f.js.map": "/HigoJhon/Wallet/static/js/main.8140fd6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d31aedf8.css",
+    "static/js/main.8140fd6f.js"
+  ]
+}
