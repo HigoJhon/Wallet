@@ -1,13 +1,19 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# :receipt: Wallet :receipt:
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Neste projeto desenvolvi uma carteira de controle de gastos com conversor de moedas, o usuario pode ser capaz de:
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+* Adicionar, remover e editar um gasto;
+* Visualizar uma tabelas com seus gastos;
+* Visualizar o total de gastos convertidos para uma moeda de escolha;
+
+#### Habiliadades usadas: 
+
+* Store Redux em aplicações React
+* Reducers no Redux em aplicações React
+* Actions no Redux em aplicações React
+* Dispatchers no Redux em aplicações React
+* Conectar Redux aos componentes React
+* Actions assíncronas na aplicação React que faz uso de Redux.
+
+#### Caso queira ver em seu navegardor e so cliclar no link a baixo.
+#### https://higojhon.github.io/Wallet/
