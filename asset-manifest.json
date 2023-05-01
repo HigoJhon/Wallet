@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/HigoJhon/Wallet/static/css/main.d31aedf8.css",
-    "main.js": "/HigoJhon/Wallet/static/js/main.8140fd6f.js",
-    "index.html": "/HigoJhon/Wallet/index.html",
-    "main.d31aedf8.css.map": "/HigoJhon/Wallet/static/css/main.d31aedf8.css.map",
-    "main.8140fd6f.js.map": "/HigoJhon/Wallet/static/js/main.8140fd6f.js.map"
+    "main.css": "/Wallet/static/css/main.d31aedf8.css",
+    "main.js": "/Wallet/static/js/main.59bc1e39.js",
+    "index.html": "/Wallet/index.html",
+    "main.d31aedf8.css.map": "/Wallet/static/css/main.d31aedf8.css.map",
+    "main.59bc1e39.js.map": "/Wallet/static/js/main.59bc1e39.js.map"
   },
   "entrypoints": [
     "static/css/main.d31aedf8.css",
-    "static/js/main.8140fd6f.js"
+    "static/js/main.59bc1e39.js"
   ]
 }
